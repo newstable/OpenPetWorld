@@ -1,0 +1,85 @@
+.normal-btn {
+    width: 12%;
+    height: 72px;
+    background: url("../../assets/img/greenImgBtn.png") no-repeat scroll 0 0 transparent;
+    background-size: 100% 100%;
+    color: #262200;
+    cursor: pointer;
+    font-size: 25px !important;
+    font-family: initial;
+    margin-right: 10px;
+    margin-left: 10px;
+    font-weight: 600;
+    outline: none;
+    border: none;
+}
+
+.x-defi-card1-btn {
+    width: 200px !important;
+}
+
+.x-defi-stake-btn {
+    width: 120px;
+    height: 72px;
+    background: url("../../assets/img/greenImgBtn.png") no-repeat scroll 0 0 transparent;
+    background-size: 100% 100%;
+    color: #262200;
+    cursor: pointer;
+    font-size: 25px !important;
+    font-family: initial;
+    margin-right: 10px;
+    margin-left: 10px;
+    font-weight: 600;
+    outline: none;
+    border: none;
+}
+
+@media only screen and (max-width:1200px) {
+    .x-defi-stake-btn {
+        width: 95px;
+        font-size: 23px;
+    }
+
+    .x-defi-card2-btn {
+        width: 160px !important;
+    }
+}
+
+@media only screen and (max-width: 959px) {
+    .normal-btn {
+        width: 20%;
+    }
+
+    .x-defi-stake-btn {
+        width: 170px;
+    }
+
+    .x-defi-card2-btn {
+        width: 230px !important;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .normal-btn {
+        width: 25%;
+    }
+
+    .x-defi-card1-btn {
+        width: 250px !important;
+    }
+
+    .x-defi-card2-btn {
+        width: 200px !important;
+        height: 70px !important;
+    }
+
+    .x-defi-stake-btn {
+        width: 150px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .normal-btn {
+        width: 170px;
+    }
+}
