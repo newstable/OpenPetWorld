@@ -1,7 +1,7 @@
-import {Provider} from 'react-redux';
+import { Provider } from 'react-redux';
 import store from "./store";
 import Routes from './router';
-import {UseWalletProvider } from 'use-wallet'
+import { UseWalletProvider } from 'use-wallet'
 import './assets/style/bootstrap.min.css';
 import './App.css';
 import React, { useState, useEffect } from 'react'
@@ -13,34 +13,34 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => setLoading(false), 6000)
+    setTimeout(() => setLoading(false), 1)
   }, [])
-  
+
   return (
-      <LoadingScreen
-        loading={loading}
-        bgColor='#00ccff'
-        spinnerColor='#9ee5f8'
-        textColor='#ffffff'
-        logoSrc={logoImg}
-        text='Loading Screen'
-      > 
-        <UseWalletProvider
+    <LoadingScreen
+      loading={loading}
+      bgColor='#00ccff'
+      spinnerColor='#9ee5f8'
+      textColor='#ffffff'
+      logoSrc={logoImg}
+      text='Loading Screen'
+    >
+      <UseWalletProvider
         chainId={31337}
         connectors={{
           // This is how connectors get configured
           portis: { dAppId: 'my-dapp-id-123-xyz' },
         }}
-        > 
-          <Provider store={store}>
-            <ApplicationProvider>
-                <Routes /> 
-            </ ApplicationProvider>
-          </Provider>
-        </UseWalletProvider>
-        
-      </LoadingScreen>
-    
+      >
+        <Provider store={store}>
+          <ApplicationProvider>
+            <Routes />
+          </ ApplicationProvider>
+        </Provider>
+      </UseWalletProvider>
+
+    </LoadingScreen>
+
   );
 }
 export default App;
